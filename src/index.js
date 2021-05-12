@@ -40,4 +40,5 @@ function greetMe(name, callback) {
   callback(personToGreet);
 }
 
+// calling function to call function
 greetMe("Richmond", askName);
