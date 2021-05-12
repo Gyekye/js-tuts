@@ -28,3 +28,16 @@ console.log(`I will be ${age(2001)} this year`);
 
 let arrow = () => "single line function";
 console.log(arrow());
+
+// callback functions
+
+function askName(name) {
+  console.log(` Your name is ${name}`);
+}
+
+function greetMe(name, callback) {
+  let personToGreet = name;
+  callback(personToGreet);
+}
+
+greetMe("Richmond", askName);
