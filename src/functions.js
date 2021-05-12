@@ -29,16 +29,28 @@ console.log(`I will be ${age(2001)} this year`);
 let arrow = () => "single line function";
 console.log(arrow());
 
-// callback functions
-
-function askName(name) {
-  console.log(` Your name is ${name}`);
-}
-
 function greetMe(name, callback) {
   let personToGreet = name;
   callback(personToGreet);
 }
-
 // calling function to call function
 greetMe("Richmond", askName);
+
+// callback functions
+function askName(name) {
+  console.log(` Your name is ${name}`);
+}
+
+// ForEach Array Method
+let grades = [10, 20, 0, 145, 12, 18, 560];
+grades.forEach(iterateArray);
+// callback function to iterate array
+function iterateArray(grade, index) {
+  console.log(`${grade} and ${index}`);
+}
+// normal function
+grades.forEach(function (number) {
+  console.log(number);
+});
+// arrow function
+grades.forEach((number) => console.log(` your grade is :${number}`));
